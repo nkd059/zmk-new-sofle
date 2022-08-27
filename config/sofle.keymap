@@ -10,10 +10,10 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-#define BASE 1
-#define LOWER 2
-#define RAISE 3
-#define ADJUST 4
+#define BASE 0
+#define LOWER 1
+#define RAISE 2
+#define ADJUST 3
 
 / {
 
