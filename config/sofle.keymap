@@ -15,7 +15,11 @@
 #define RAISE 2
 #define ADJUST 3
 
-	
+	// active F_row mod-tap by 200ms
+	 &mt {
+		 tapping-term-ms = <200>;
+		 };
+		 
 / {
 
    // Activate ADJUST layer by pressing raise and lower
@@ -27,10 +31,6 @@
         };
     };
 	
-	// active F_row mod-tap by 200ms
-	 &mt {
-		 tapping-term-ms = <200>;
-		 };
 	
 	// active tap-dance alt+f4 by double tap alt
 	behaviors {
