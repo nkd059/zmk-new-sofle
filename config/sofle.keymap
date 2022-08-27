@@ -15,10 +15,7 @@
 #define RAISE 2
 #define ADJUST 3
 
-	// active F_row mod-tap by 250ms
-	 &mt {
-		 tapping-term-ms = <250>;
-		 };
+	
 / {
 
    // Activate ADJUST layer by pressing raise and lower
@@ -29,6 +26,23 @@
             then-layer = <ADJUST>;
         };
     };
+	
+	// active F_row mod-tap by 200ms
+	 &mt {
+		 tapping-term-ms = <200>;
+		 };
+	
+	// active tap-dance alt+f4 by double tap alt
+	behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALT F4";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LALT>, <&kp LA(F4)>;
+        };
+    };
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -45,7 +59,7 @@
 &kp TAB   	&kp Q  	   &kp W       &kp E       &kp R        &kp T                                 &kp Y         &kp U        &kp I         &kp O        &kp P        &kp BSLH
 &kp CAPS  	&kp A  	   &kp S       &kp D       &kp F        &kp G                                 &kp H         &kp J        &kp K         &kp L        &kp SEMI     &kp SQT
 &kp LSHFT 	&kp Z  	   &kp X       &kp C       &kp V        &kp B      &kp C_MUTE    &kp LG(L)    &kp N         &kp M        &kp COMMA     &kp DOT      &kp FSLH     &kp RSHFT
-					   &kp LWIN    &kp LALT    &kp LCTRL    &kp SPACE  &mo LOWER     &mo RAISE    &kp ENTER     &kp DEL      &kp PSCRN     &kp K_CMENU
+					   &kp LWIN    &td0        &kp LCTRL    &kp SPACE  &mo LOWER     &mo RAISE    &kp ENTER     &kp DEL      &kp PSCRN     &kp K_CMENU
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
