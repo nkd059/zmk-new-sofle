@@ -38,7 +38,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ALT_F4";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <350>;
             bindings = <&kp LALT>, <&kp LA(F4)>;
 		};
     };
@@ -49,7 +49,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CTR_X";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <350>;
             bindings = <&kp X>, <&kp LC(X)>;
 		};
     };	
@@ -60,7 +60,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CTR_C";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <350>;
             bindings = <&kp C>, <&kp LC(C)>;
 		};
     };	
@@ -71,7 +71,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CTR_V";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <350>;
             bindings = <&kp V>, <&kp LC(V)>;
         };
     };
@@ -82,7 +82,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "WIN_V";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <350>;
             bindings = <&kp LWIN>, <&kp LG(V)>;
         };
     };
@@ -93,7 +93,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CTR_Z";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <350>;
             bindings = <&kp Z>, <&kp LC(Z)>;
         };
     };
@@ -104,10 +104,34 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CTR_A";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <350>;
             bindings = <&kp A>, <&kp LC(A)>;
         };
     };
+	
+	//Lock lower layer
+	behaviors {		
+		td7: Lower Lock {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Lower Lock";
+            #binding-cells = <0>;
+            tapping-term-ms = <350>;
+            bindings = <&mo LOWER>, <&tog LOWER>;
+        };
+    };
+	
+	//Lock raise layer
+	behaviors {		
+		td8: raise Lock {
+            compatible = "zmk,behavior-tap-dance";
+            label = "raise Lock";
+            #binding-cells = <0>;
+            tapping-term-ms = <350>;
+            bindings = <&mo RAISE>, <&tog RAISE>;
+        };
+    };
+	
+	
     keymap {
         compatible = "zmk,keymap";
 
@@ -124,7 +148,7 @@
 &kp TAB   	&kp Q  	   &kp W       &kp E       &kp R        &kp T                                 &kp Y         &kp U        &kp I         &kp O        &kp P        &kp BSLH
 &kp CAPS  	&td6  	   &kp S       &kp D       &kp F        &kp G                                 &kp H         &kp J        &kp K         &kp L        &kp SEMI     &kp SQT
 &kp LSHFT 	&td5  	   &td1        &td2        &td3         &kp B      &kp C_MUTE    &kp LG(L)    &kp N         &kp M        &kp COMMA     &kp DOT      &kp FSLH     &kp RSHFT
-					   &td4        &td0        &kp LCTRL    &kp SPACE  &mo LOWER     &mo RAISE    &kp ENTER     &kp DEL      &kp PSCRN     &kp K_CMENU
+					   &td4        &td0        &kp LCTRL    &kp SPACE  &td7          &td8         &kp ENTER     &kp DEL      &kp PSCRN     &kp K_CMENU
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
