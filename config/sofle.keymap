@@ -32,7 +32,7 @@
     };
 	
 	
-	// active tap-dance by double tap
+	// active close by double tap alt
 	behaviors {
         td0: ALT_F4 {
             compatible = "zmk,behavior-tap-dance";
@@ -40,21 +40,33 @@
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&kp LALT>, <&kp LA(F4)>;
-			
+		};
+    };
+	
+	//active cut by double tap x
+	behaviors {		
 		td1: CTR_X {
             compatible = "zmk,behavior-tap-dance";
             label = "CTR_X";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&kp X>, <&kp LC(X)>;
-			
+		};
+    };	
+	
+	//active copy by double tap c
+	behaviors {		
 		td2: CTR_C {
             compatible = "zmk,behavior-tap-dance";
             label = "CTR_C";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&kp C>, <&kp LC(C)>;
-			
+		};
+    };	
+	
+	//active paste by double tap v
+	behaviors {		
 		td3: CTR_V {
             compatible = "zmk,behavior-tap-dance";
             label = "CTR_V";
@@ -64,7 +76,18 @@
         };
     };
 
-
+	//active clipboard by double tap windows
+	behaviors {		
+		td4: WIN_V {
+            compatible = "zmk,behavior-tap-dance";
+            label = "WIN_V";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp LWIN>, <&kp LG(V)>;
+        };
+    };
+	
+	
     keymap {
         compatible = "zmk,keymap";
 
@@ -81,7 +104,7 @@
 &kp TAB   	&kp Q  	   &kp W       &kp E       &kp R        &kp T                                 &kp Y         &kp U        &kp I         &kp O        &kp P        &kp BSLH
 &kp CAPS  	&kp A  	   &kp S       &kp D       &kp F        &kp G                                 &kp H         &kp J        &kp K         &kp L        &kp SEMI     &kp SQT
 &kp LSHFT 	&kp Z  	   &td1        &td2        &td3         &kp B      &kp C_MUTE    &kp LG(L)    &kp N         &kp M        &kp COMMA     &kp DOT      &kp FSLH     &kp RSHFT
-					   &kp LWIN    &td0        &kp LCTRL    &kp SPACE  &mo LOWER     &mo RAISE    &kp ENTER     &kp DEL      &kp PSCRN     &kp K_CMENU
+					   &td4        &td0        &kp LCTRL    &kp SPACE  &mo LOWER     &mo RAISE    &kp ENTER     &kp DEL      &kp PSCRN     &kp K_CMENU
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
