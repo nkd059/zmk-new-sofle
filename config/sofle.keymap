@@ -113,19 +113,6 @@
         };
     };
 	
-	behaviors {
-        tog_mo: behavior_mo_tog {
-            compatible = "zmk,behavior-hold-tap";
-            label = "mo_tog";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&tog>, <&mo>;
-        };
-    };
-	
-	
-	
 	
     keymap {
         compatible = "zmk,keymap";
@@ -143,7 +130,7 @@
 &kp TAB   	&kp Q  	   &kp W       &kp E       &kp R        &kp T                                 &kp Y         &kp U        &kp I         &kp O        &kp P        &kp BSLH
 &kp CAPS  	&td6  	   &kp S       &kp D       &kp F        &kp G                                 &kp H         &kp J        &kp K         &kp L        &kp SEMI     &kp SQT
 &kp LSHFT 	&td5  	   &td1        &td2        &td3         &kp B      &kp C_MUTE    &kp LG(L)    &kp N         &kp M        &kp COMMA     &kp DOT      &kp FSLH     &kp RSHFT
-					   &td4        &td0        &kp LCTRL    &kp SPACE  TOG_MO(1)     TOG_MO(2)    &kp ENTER     &kp DEL      &kp PSCRN     &kp K_CMENU
+					   &td4        &td0        &kp LCTRL    &kp SPACE  &mo LOWER     &mo RAISE   &kp ENTER     &kp DEL      &kp PSCRN     &kp K_CMENU
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
