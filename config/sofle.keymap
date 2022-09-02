@@ -42,7 +42,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ALT_F4";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp LALT>, <&kp LA(F4)>;
 		};
     };
@@ -53,7 +53,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CTR_X";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp X>, <&kp LC(X)>;
 		};
     };	
@@ -64,7 +64,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CTR_C";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp C>, <&kp LC(C)>;
 		};
     };	
@@ -75,7 +75,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CTR_V";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp V>, <&kp LC(V)>;
         };
     };
@@ -86,7 +86,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "WIN_V";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp LWIN>, <&kp LG(V)>;
         };
     };
@@ -97,7 +97,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CTR_Z";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp Z>, <&kp LC(Z)>;
         };
     };
@@ -108,7 +108,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CTR_A";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp A>, <&kp LC(A)>;
         };
     };
@@ -129,7 +129,7 @@
 &mt F1 ESC  &mt F2 N1  &mt F3 N2   &mt F4 N3   &mt F5 N4    &mt F6 N5                             &mt F7 N6     &mt F8 N7    &mt F9 N8     &mt F10 N9   &mt F11 N0   &mt F12 BSPC
 &kp TAB   	&kp Q  	   &kp W       &kp E       &kp R        &kp T                                 &kp Y         &kp U        &kp I         &kp O        &kp P        &kp BSLH
 &kp CAPS  	&td6  	   &kp S       &kp D       &kp F        &kp G                                 &kp H         &kp J        &kp K         &kp L        &kp SEMI     &kp SQT
-&kp LSHFT 	&td5  	   &td1        &td2        &td3         &kp B      &kp C_MUTE    &kp LG(L)    &kp N         &kp M        &kp COMMA     &kp DOT      &kp FSLH     &kp RSHFT
+&reset   	&td5  	   &td1        &td2        &td3         &kp B      &kp C_MUTE    &kp LG(L)    &kp N         &kp M        &kp COMMA     &kp DOT      &kp FSLH     &reset
 					   &td4        &td0        &kp LCTRL    &kp SPACE  &mo LOWER     &mo RAISE   &kp ENTER     &kp DEL      &kp PSCRN     &kp K_CMENU
             >;
 
