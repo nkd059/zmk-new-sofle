@@ -10,14 +10,12 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-// Macro to apply toggle-layer-on-tap/momentary-layer-on-hold to a specific layer
-#define TOG_MO(layer) &tog_mo layer layer
-
 // Define Layer
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
+#define MO_TOG(layer) &mo_tog layer layer
 
 	// active F_row mod-tap by 200ms
 	 &mt {
@@ -26,6 +24,17 @@
 		 
 / {
 
+behaviors {
+        mo_tog: behavior_mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            label = "mo_tog";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&tog>;
+        };
+    };
+	
    // Activate ADJUST layer by pressing raise and lower
     conditional_layers {
         compatible = "zmk,conditional-layers";
