@@ -168,14 +168,14 @@
 // |   |   |   |   |   |   |                   |    |  7  |  8  |  9  |  +  | BKSPC |
 // |   |   |   |   |   |   |                   |    |  4  |  5  |  6  |  -  | none  |
 // |   |   |   |   |   |   |                   |    |  1  |  2  |  3  |  *  | ENTER |
-// |   |   |   |   |   |   |     | 		 |     |    |  0  |  ,  |  .  |  \  | PRINT |
+// |   |   |   |   |   |   |     | 		 |     |    |     |  0  |  .  |  \  | PRINT |
 //         |   |   |   |   |     | 		 |     |    |     |     |     |
             bindings = <
-&trans  &trans  &trans  &trans   &trans   &trans                     &trans    &kp KP_N7  &kp KP_N8    &kp KP_N9    &kp KP_PLUS     &trans
-&trans  &trans  &trans  &trans   &trans   &trans                     &trans    &kp KP_N4  &kp KP_N5    &kp KP_N6    &kp KP_MINUS    &none
-&trans  &trans  &trans  &trans   &trans   &trans                 	 &trans    &kp KP_N1  &kp KP_N2    &kp KP_N3    &kp KP_MULTIPLY &kp ENTER
-&trans  &trans 	&trans 	&trans 	 &trans   &trans  &trans     &trans  &trans    &kp KP_N0  &kp KP_COMMA &kp KP_DOT   &kp KP_DIVIDE   &trans
-                &trans  &trans   &trans   &trans  &trans     &trans  &trans    &trans     &trans       &trans
+&trans  &trans  &trans  &trans   &trans   &trans                     &trans    &kp N7  &kp N8   &kp KP_N9    &kp PLUS    &trans
+&trans  &trans  &trans  &trans   &trans   &trans                     &trans    &kp N4  &kp N5   &kp KP_N6    &kp MINUS   &none
+&trans  &trans  &trans  &trans   &trans   &trans                 	 &trans    &kp N1  &kp N2   &kp KP_N3    &kp ASTRK   &kp ENTER
+&trans  &trans 	&trans 	&trans 	 &trans   &trans  &trans     &trans  &trans    &trans  &kp n0   &kp KP_DOT   &kp SLASH   &trans
+                &trans  &trans   &trans   &trans  &trans     &trans  &trans    &trans  &trans   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
