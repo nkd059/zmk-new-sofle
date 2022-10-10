@@ -17,9 +17,9 @@
 #define ADJUST 3
 
 
-	// active F_row mod-tap by 200ms
+	// active F_row mod-tap by 300ms
 		&mt {
-			tapping-term-ms = <200>;
+			tapping-term-ms = <300>;
 			};
  
 / {
@@ -39,7 +39,7 @@
 				compatible = "zmk,behavior-tap-dance";
 				label = "CTR_A";
 				#binding-cells = <0>;
-				tapping-term-ms = <200>;
+				tapping-term-ms = <400>;
 				bindings = <&kp A>, <&kp LC(A)>;
 			};
 		};
@@ -51,7 +51,7 @@
 				compatible = "zmk,behavior-tap-dance";
 				label = "WIN_V";
 				#binding-cells = <0>;
-				tapping-term-ms = <200>;
+				tapping-term-ms = <400>;
 				bindings = <&kp LWIN>, <&kp LG(V)>;
 			};
 		};
@@ -63,7 +63,7 @@
 				compatible = "zmk,behavior-tap-dance";
 				label = "CTR_Z";
 				#binding-cells = <0>;
-				tapping-term-ms = <200>;
+				tapping-term-ms = <400>;
 				bindings = <&kp Z>, <&kp LC(Z)>;
 			};
 		};	
@@ -75,7 +75,7 @@
 				compatible = "zmk,behavior-tap-dance";
 				label = "CTR_X";
 				#binding-cells = <0>;
-				tapping-term-ms = <200>;
+				tapping-term-ms = <400>;
 				bindings = <&kp X>, <&kp LC(X)>;
 			};
 		};	
@@ -87,7 +87,7 @@
 				compatible = "zmk,behavior-tap-dance";
 				label = "CTR_C";
 				#binding-cells = <0>;
-				tapping-term-ms = <200>;
+				tapping-term-ms = <400>;
 				bindings = <&kp C>, <&kp LC(C)>;
 			};
 		};
@@ -99,7 +99,7 @@
 				compatible = "zmk,behavior-tap-dance";
 				label = "CTR_V";
 				#binding-cells = <0>;
-				tapping-term-ms = <200>;
+				tapping-term-ms = <400>;
 				bindings = <&kp V>, <&kp LC(V)>;
 			};
 		};	
@@ -111,7 +111,7 @@
 				compatible = "zmk,behavior-tap-dance";
 				label = "ALT_F4";
 				#binding-cells = <0>;
-				tapping-term-ms = <200>;
+				tapping-term-ms = <400>;
 				bindings = <&kp LALT>, <&kp LA(F4)>;
 			};
 		};
@@ -123,7 +123,7 @@
 				compatible = "zmk,behavior-tap-dance";
 				label = "LOWER_layer";
 				#binding-cells = <0>;
-				tapping-term-ms = <200>;
+				tapping-term-ms = <400>;
 				bindings = <&mo LOWER>, <&tog LOWER>;
 			};
 		};
@@ -135,7 +135,7 @@
 				compatible = "zmk,behavior-tap-dance";
 				label = "RAISE_layer";
 				#binding-cells = <0>;
-				tapping-term-ms = <200>;
+				tapping-term-ms = <400>;
 				bindings = <&mo RAISE>, <&tog RAISE>;
 			};
 		};	
@@ -168,13 +168,13 @@
 // |   |   |   |   |   |   |                   |    |  7  |  8  |  9  |  +  | BKSPC |
 // |   |   |   |   |   |   |                   |    |  4  |  5  |  6  |  -  | none  |
 // |   |   |   |   |   |   |                   |    |  1  |  2  |  3  |  *  | ENTER |
-// |   |   |   |   |   |   |reset| 		 |     |    |  0  |  ,  |  .  |  \  | PRINT |
+// |   |   |   |   |   |   |     | 		 |     |    |  0  |  ,  |  .  |  \  | PRINT |
 //         |   |   |   |   |     | 		 |     |    |     |     |     |
             bindings = <
 &trans  &trans  &trans  &trans   &trans   &trans                     &trans    &kp KP_N7  &kp KP_N8    &kp KP_N9    &kp KP_PLUS     &trans
 &trans  &trans  &trans  &trans   &trans   &trans                     &trans    &kp KP_N4  &kp KP_N5    &kp KP_N6    &kp KP_MINUS    &none
 &trans  &trans  &trans  &trans   &trans   &trans                 	 &trans    &kp KP_N1  &kp KP_N2    &kp KP_N3    &kp KP_MULTIPLY &kp ENTER
-&trans  &trans 	&trans 	&trans 	 &trans   &trans  &reset     &trans  &trans    &kp KP_N0  &kp KP_COMMA &kp KP_DOT   &kp KP_DIVIDE   &trans
+&trans  &trans 	&trans 	&trans 	 &trans   &trans  &trans     &trans  &trans    &kp KP_N0  &kp KP_COMMA &kp KP_DOT   &kp KP_DIVIDE   &trans
                 &trans  &trans   &trans   &trans  &trans     &trans  &trans    &trans     &trans       &trans
             >;
 
@@ -186,13 +186,13 @@
 // |   |   |   |   |   |   |                   |    |    |      |     |    |    |
 // |   |   |   |   |   |   |                   |    |    |  up  |     |    |    |
 // |   |   |   |   |   |   |                   |    |left| down |right|    |    |
-// |   |   |   |   |   |   |    | 		 |reset|    |    |      |     |    |    |
+// |   |   |   |   |   |   |    | 		 |     |    |    |      |     |    |    |
 //         |   |   |   |   |    | 		 |     |    |    |      |     |
             bindings = <
 &trans  &trans  &trans  &trans   &trans   &trans                     &trans    &trans   &trans    &trans     &trans   &trans
 &trans  &trans  &trans  &trans   &trans   &trans                     &trans    &trans   &kp UP    &trans     &trans   &trans
 &trans  &trans  &trans  &trans   &trans   &trans                 	 &trans    &kp LEFT &kp DOWN  &kp RIGHT  &trans   &trans
-&trans  &trans 	&trans 	&trans 	 &trans   &trans  &trans     &reset  &trans    &trans   &trans    &trans     &trans   &trans
+&trans  &trans 	&trans 	&trans 	 &trans   &trans  &trans     &trans  &trans    &trans   &trans    &trans     &trans   &trans
                 &trans  &trans   &trans   &trans  &trans     &trans  &trans    &trans   &trans    &trans
             >;
 
