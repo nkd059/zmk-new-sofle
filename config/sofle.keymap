@@ -19,11 +19,6 @@
 #define ADJUST 3
 
 
-	// active F_row mod-tap by 300ms
-		&mt {
-			tapping-term-ms = <300>;
-			};
- 
 / {
 	// Activate ADJUST layer by pressing raise and lower
 		conditional_layers {
@@ -34,91 +29,6 @@
 			};
 		};
 	
-	
-	//Double tap A to select all
-		behaviors {		
-			td0: CTR_A {
-				compatible = "zmk,behavior-tap-dance";
-				label = "CTR_A";
-				#binding-cells = <0>;
-				tapping-term-ms = <400>;
-				bindings = <&kp A>, <&kp LC(A)>;
-			};
-		};
-	
-	
-	//Double tap Win to active clipboard
-		behaviors {		
-			td1: WIN_V {
-				compatible = "zmk,behavior-tap-dance";
-				label = "WIN_V";
-				#binding-cells = <0>;
-				tapping-term-ms = <400>;
-				bindings = <&kp LWIN>, <&kp LG(V)>;
-			};
-		};
-	
-	
-	//Double tap Z to undo
-		behaviors {		
-			td2: CTR_Z {
-				compatible = "zmk,behavior-tap-dance";
-				label = "CTR_Z";
-				#binding-cells = <0>;
-				tapping-term-ms = <400>;
-				bindings = <&kp Z>, <&kp LC(Z)>;
-			};
-		};	
-	
-	
-	//Double tap X to cut
-		behaviors {		
-			td3: CTR_X {
-				compatible = "zmk,behavior-tap-dance";
-				label = "CTR_X";
-				#binding-cells = <0>;
-				tapping-term-ms = <400>;
-				bindings = <&kp X>, <&kp LC(X)>;
-			};
-		};	
-	
-
-	//Double tap C to copy
-		behaviors {		
-			td4: CTR_C {
-				compatible = "zmk,behavior-tap-dance";
-				label = "CTR_C";
-				#binding-cells = <0>;
-				tapping-term-ms = <400>;
-				bindings = <&kp C>, <&kp LC(C)>;
-			};
-		};
-
-		
-	//Double tap V to paste
-		behaviors {		
-			td5: CTR_V {
-				compatible = "zmk,behavior-tap-dance";
-				label = "CTR_V";
-				#binding-cells = <0>;
-				tapping-term-ms = <400>;
-				bindings = <&kp V>, <&kp LC(V)>;
-			};
-		};	
-		
-	
-	//Double tap ALT to close
-		behaviors {
-			td6: ALT_F4 {
-				compatible = "zmk,behavior-tap-dance";
-				label = "ALT_F4";
-				#binding-cells = <0>;
-				tapping-term-ms = <400>;
-				bindings = <&kp LALT>, <&kp LA(F4)>;
-			};
-		};
-	
-
 	//Double tap low layer to lock
 		behaviors {
 			td7: Lower_layer {
@@ -147,18 +57,18 @@
 
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2  |  3   |  4   |  5  |                      |  6   |   7   |  8    |  9   |   0   | BKSPC |
-// |  TAB  |  Q  |  W  |  E   |  R   |  T  |                      |  Y   |   U   |  I    |  O   |   P   |   \   |
-// |  CAPS |  A  |  S  |  D   |  F   |  G  |                      |  H   |   J   |  K    |  L   |   ;   |   '   |
-// |  WIN  |  Z  |  X  |  C   |  V   |  B  | MUTE |       |WinLock|  N   |   M   |  ,    |  .   |   /   | PRINT |
-//               |CTRL | ALT  | SHIFT|Enter| LOWER|       | RAISE | SPACE|  DEL  | HOME  |  END |
+// |  ESC  |  1  |  2  |  3   |  4   |  5  |                      |  6   |  7  |  8  |  9  |  0  | BKSPC |
+// |  TAB  |  Q  |  W  |  E   |  R   |  T  |                      |  Y   |  U  |  I  |  O  |  P  |   \   |
+// |  CAPS |  A  |  S  |  D   |  F   |  G  |                      |  H   |  J  |  K  |  L  |  ;  |   '   |
+// |  WIN  |  Z  |  X  |  C   |  V   |  B  | MUTE |       |WinLock|  N   |  M  |  ,  |  .  |  /  | PRINT |
+//               |CTRL | ALT  | SHIFT|Enter| LOWER|       | RAISE | SPACE| DEL |  -  |  +  |
             bindings = <
 			
-&kp ESC  	&mt F1 N1  &mt F2 N2   &mt F3 N3   &mt F4 N4    &mt F5 N5                             &mt F6 N6     &mt F7 N7    &mt F8 N8     &mt F9 N9   &mt F10 N0   &kp BSPC
-&kp TAB   	&kp Q  	   &kp W       &kp E       &kp R        &kp T                                 &kp Y         &kp U        &kp I         &mt F11 O   &mt F12 P    &kp BSLH
-&kp CAPS  	&td0  	   &kp S       &kp D       &kp F        &kp G                                 &kp H         &kp J        &kp K         &kp L       &kp SEMI     &kp SQT
-&td1  		&td2  	   &td3        &td4        &td5         &kp B      &kp C_MUTE      &kp LG(L)  &kp N         &kp M        &kp COMMA     &kp DOT     &kp FSLH     &kp PSCRN
-					   &kp LCTRL   &td6   	   &kp LSHFT  	&kp ENTER  &td7            &td8       &kp SPACE     &kp DEL      &kp HOME      &kp END
+&kp ESC   &kp N1   &kp N2      &kp N3      &kp N4       &kp N5                                &kp N6      &kp N7     &kp N8      &kp N9     &kp N0      &kp BSPC
+&kp TAB   &kp Q    &kp W       &kp E       &kp R        &kp T                                 &kp Y       &kp U      &kp I       &kp O      &kp P       &kp BSLH
+&kp CAPS  &kp A    &kp S       &kp D       &kp F        &kp G                                 &kp H       &kp J      &kp K       &kp L      &kp SEMI    &kp SQT
+&kp LGUI  &kp Z    &kp X       &kp C       &kp V        &kp B      &kp C_MUTE      &kp LG(L)  &kp N       &kp M      &kp COMMA   &kp DOT    &kp FSLH    &kp PSCRN
+				   &kp LCTRL   &kp LALT    &kp LSHFT  	&kp ENTER  &td7            &td8       &kp SPACE   &kp DEL    &kp MINUS   &kp EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
