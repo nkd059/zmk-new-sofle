@@ -154,7 +154,7 @@
 //               |CTRL | ALT  | SHIFT|Enter| LOWER|       | RAISE | SPACE|  DEL  | HOME  |  END |
             bindings = <
 			
-&kp ESC  	&mt F1 N1  &mt F2 N2   &mt F3 N3   &mt F4 N4    &mt F5 N5                             &mt F6 N6     &mt F7 N7    &mt F8 N8     &mt F9 N9   &mt F10 N0   &kp BSPC
+&kp ESC  	&kp N1  &mt F2 N2   &mt F3 N3   &mt F4 N4    &mt F5 N5                             &mt F6 N6     &mt F7 N7    &mt F8 N8     &mt F9 N9   &mt F10 N0   &kp BSPC
 &kp TAB   	&kp Q  	   &kp W       &kp E       &kp R        &kp T                                 &kp Y         &kp U        &kp I         &mt F11 O   &mt F12 P    &kp BSLH
 &kp CAPS  	&td0  	   &kp S       &kp D       &kp F        &kp G                                 &kp H         &kp J        &kp K         &kp L       &kp SEMI     &kp SQT
 &td1  		&td2  	   &td3        &td4        &td5         &kp B      &kp C_MUTE      &kp LG(L)  &kp N         &kp M        &kp COMMA     &kp DOT     &kp FSLH     &kp PSCRN
